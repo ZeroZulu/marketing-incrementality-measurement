@@ -1,0 +1,89 @@
+# Marketing Incrementality Analysis Configuration
+# ================================================
+
+# Data Source Configuration
+data:
+  # Options: "synthetic" (demo) or "bigquery" (real data)
+  source: "synthetic"
+  
+  # BigQuery settings (only used if source: "bigquery")
+  bigquery:
+    project: "your-gcp-project"
+    dataset: "analytics_123456789"
+    credentials_path: null  # Uses GOOGLE_APPLICATION_CREDENTIALS if null
+    
+  # Synthetic data settings (only used if source: "synthetic")
+  synthetic:
+    n_users: 50000
+    n_regions: 10
+    treatment_regions: ["California", "New York"]
+    control_regions: ["Texas", "Florida", "Illinois", "Ohio", "Pennsylvania"]
+    random_seed: 42
+
+# Analysis Time Period
+time_period:
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+  treatment_start: "2024-07-01"  # When campaign launched
+  
+# Treatment Configuration
+treatment:
+  # True effect size (for synthetic data validation)
+  true_effect: 0.12  # 12% true lift
+  
+  # Confounding strength (for synthetic data)
+  # Higher = more selection bias in observational data
+  confounding_strength: 0.3
+
+# Model-Specific Settings
+models:
+  # Difference-in-Differences
+  did:
+    cluster_robust_se: true
+    cluster_var: "region"
+    include_time_fe: true
+    include_region_fe: true
+    
+  # Propensity Score Matching
+  psm:
+    # Covariates to match on
+    covariates:
+      - "days_since_install"
+      - "session_count"
+      - "engagement_score"
+      - "lifetime_value"
+      - "is_mobile"
+      - "is_organic"
+    matching_method: "nearest"  # "nearest", "caliper", "kernel"
+    caliper: 0.1
+    replacement: false
+    n_neighbors: 1
+    
+  # Synthetic Control
+  synthetic_control:
+    # Donor pool (control regions)
+    donor_regions: ["Texas", "Florida", "Illinois", "Ohio", "Pennsylvania"]
+    # Pre-treatment periods for fitting
+    pre_treatment_periods: 26  # weeks
+    # Optimization method
+    optimization: "simplex"  # "simplex" or "scipy"
+    
+# Business Impact Settings
+business:
+  campaign_spend: 500000  # Total campaign spend in USD
+  revenue_per_install: 25  # Average revenue per incremental install
+  
+# Output Settings
+output:
+  directory: "output"
+  formats:
+    - "json"
+    - "csv"
+  generate_figures: true
+  figure_format: "png"
+  figure_dpi: 150
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "output/analysis.log"

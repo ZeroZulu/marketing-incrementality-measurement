@@ -1,0 +1,7 @@
+[
+  {"covariate": "Engagement Score", "before": 0.45, "after": 0.03},
+  {"covariate": "Days Inactive", "before": 0.38, "after": 0.05},
+  {"covariate": "Is Mobile", "before": 0.22, "after": 0.02},
+  {"covariate": "Session Count", "before": 0.31, "after": 0.04},
+  {"covariate": "Lifetime Value", "before": 0.28, "after": 0.06}
+]

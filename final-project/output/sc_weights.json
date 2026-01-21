@@ -1,0 +1,7 @@
+[
+  {"state": "Texas", "weight": 0.42},
+  {"state": "Florida", "weight": 0.28},
+  {"state": "Illinois", "weight": 0.18},
+  {"state": "Ohio", "weight": 0.08},
+  {"state": "Pennsylvania", "weight": 0.04}
+]

@@ -1,0 +1,55 @@
+{
+  "generated_at": "2024-01-20T12:00:00",
+  "summary": {
+    "avg_lift": 0.209,
+    "true_effect": 0.15
+  },
+  "did": {
+    "lift": 0.231,
+    "effect": 231,
+    "ci_lower": 0.19,
+    "ci_upper": 0.27,
+    "p_value": "< 0.001",
+    "significant": true,
+    "r_squared": 0.847
+  },
+  "psm": {
+    "lift": 0.087,
+    "effect": 0.087,
+    "ci_lower": 0.067,
+    "ci_upper": 0.107,
+    "p_value": "0.003",
+    "significant": true,
+    "n_matched": 8420,
+    "naive_lift": 0.152,
+    "bias_reduction": 0.43
+  },
+  "sc": {
+    "lift": 0.31,
+    "effect": 372,
+    "ci_lower": 0.26,
+    "ci_upper": 0.36,
+    "p_value": "0.021",
+    "significant": true,
+    "pre_rmse": 42.3,
+    "weights": {
+      "Texas": 0.42,
+      "Florida": 0.28,
+      "Illinois": 0.18,
+      "Ohio": 0.08,
+      "Pennsylvania": 0.04
+    }
+  },
+  "business": {
+    "campaign_spend": 500000,
+    "revenue_per_install": 25,
+    "incremental_installs": 10450,
+    "incremental_revenue": 261250,
+    "iroas": 0.52
+  },
+  "metadata": {
+    "data_source": "synthetic",
+    "n_users": 50000,
+    "config_path": "config/config.yaml"
+  }
+}

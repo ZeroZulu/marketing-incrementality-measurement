@@ -1,0 +1,5 @@
+[
+  {"method": "Difference-in-Differences", "lift": 23.1, "ci_lower": 19.0, "ci_upper": 27.0, "p_value": "< 0.001", "color": "#3498db"},
+  {"method": "Propensity Score Matching", "lift": 8.7, "ci_lower": 6.7, "ci_upper": 10.7, "p_value": "0.003", "color": "#2ecc71"},
+  {"method": "Synthetic Control", "lift": 31.0, "ci_lower": 26.0, "ci_upper": 36.0, "p_value": "0.021", "color": "#9b59b6"}
+]
