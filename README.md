@@ -33,9 +33,15 @@ When all three converge on the same estimate, you can trust the result.
 
 ## 📊 View the Analysis
 
-> **[📈 Click here to view the interactive notebook](https://nbviewer.org/github/ZeroZulu/marketing-incrementality-measurement/blob/main/final-project/notebooks/marketing_incrementality_analysis.ipynb?flush_cache=true)**
->
-> *GitHub cannot render Plotly charts - use the nbviewer link above to see all visualizations*
+### 🚀 Interactive Dashboard
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://marketing-incrementality-measurement-px9sfmsau9hqvnxo8hzhu8.streamlit.app/)
+
+Explore the results interactively with filters for regions, time periods, and methods.
+
+### 📓 Jupyter Notebook
+[![nbviewer](https://img.shields.io/badge/View%20on-nbviewer-orange?logo=jupyter)](https://nbviewer.org/github/ZeroZulu/marketing-incrementality-measurement/blob/main/final-project/notebooks/marketing_incrementality_analysis.ipynb)
+
+Full analysis with code, visualizations, and methodology explanations.
 
 ---
 
