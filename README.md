@@ -33,7 +33,7 @@ When all three converge on the same estimate, you can trust the result.
 
 ## 📊 View the Analysis
 
-> **[📈 Click here to view the interactive notebook](https://nbviewer.org/github/ZeroZulu/marketing-incrementality-measurement/blob/main/final-project/notebooks/marketing_incrementality_analysis.ipynb)**
+> **[📈 Click here to view the interactive notebook](https://nbviewer.org/github/ZeroZulu/marketing-incrementality-measurement/blob/main/final-project/notebooks/marketing_incrementality_analysis.ipynb?flush_cache=true)**
 >
 > *GitHub cannot render Plotly charts - use the nbviewer link above to see all visualizations*
 
